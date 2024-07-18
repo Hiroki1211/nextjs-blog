@@ -1,0 +1,15 @@
+volumes:
+  node-modules:
+
+services:
+  next:
+    build:
+      context: .
+      dockerfile: docker/next/Dockerfile
+    container_name: next-hoge
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      # - node_modules:/app/node_modules
+    command: npm run dev
