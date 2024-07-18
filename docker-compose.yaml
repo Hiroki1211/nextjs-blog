@@ -1,5 +1,5 @@
 volumes:
-  node-modules:
+  hoge:
 
 services:
   next:
@@ -11,5 +11,5 @@ services:
       - "3000:3000"
     volumes:
       - .:/app
-      - node_modules:/app/node_modules
+      - hoge:/app/node_modules
     command: npm run dev
