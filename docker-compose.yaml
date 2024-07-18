@@ -1,5 +1,7 @@
+version: "3.9"
+
 volumes:
-  hoge:
+  node_modules:
 
 services:
   next:
@@ -11,5 +13,5 @@ services:
       - "3000:3000"
     volumes:
       - .:/app
-      - hoge:/app/node_modules
+      - node_modules:/app/node_modules
     command: npm run dev
